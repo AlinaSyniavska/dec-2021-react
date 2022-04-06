@@ -1,0 +1,23 @@
+.comment-card {
+    width: 400px;
+    height: 250px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(128, 128, 0, 0.5);
+    border: 2px solid olive;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    transform: rotateX(0grad);
+    overflow: hidden;
+}
+
+.comment-card:hover {
+    transition: .5s;
+    transform: rotateX(20grad);
+}
+
+.comment-card > * {
+    margin: 0;
+    padding: 10px 5px 0;
+}

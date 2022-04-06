@@ -1,0 +1,23 @@
+.user-card {
+    width: 300px;
+    height: 250px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(100, 149, 237, 0.5);
+    border: 2px solid cornflowerblue;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    transform: rotateX(0grad);
+    overflow: hidden;
+}
+
+.user-card:hover {
+    transition: .5s;
+    transform: rotateX(20grad);
+}
+
+.user-card > * {
+    margin: 0;
+    padding: 10px 5px 0;
+}
