@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: start;
+    column-gap: 100px;
+
+    padding: 30px;
+}
+
+.button{
+    cursor: pointer;
+    padding: 10px;
+    background: #e7e7e8;
+    border-radius: 5px;
+    border: none;
+}
+
+.button:hover {
+    background: #aeb3b8;
+    border-radius: 5px;
+}
