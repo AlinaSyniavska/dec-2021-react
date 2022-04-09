@@ -1,4 +1,5 @@
-import formCss from '../Form.module.css'
+// import formCss from '../Form.module.css'
+import '../Form.module.css'
 import {useState} from "react";
 
 const FormControlled = () => {
