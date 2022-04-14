@@ -1,0 +1,10 @@
+.pageComponent {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+.pageComponent>div {
+    width: 45%;
+}
