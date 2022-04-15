@@ -2,7 +2,16 @@ import {Routes, Route, Navigate} from "react-router-dom";
 
 import './App.css';
 import {MainLayout} from "./layouts";
-import {AboutPage, HomePage, NotFoundPage, PostsPage, SinglePostPage, SingleUserPage, UsersPage} from "./pages";
+import {
+    AboutPage,
+    CommentsPage,
+    HomePage,
+    NotFoundPage,
+    PostsPage,
+    SinglePostPage,
+    SingleUserPage,
+    UsersPage
+} from "./pages";
 // import {Button} from "./components";
 
 
@@ -22,7 +31,9 @@ function App() {
                     </Route>
                 </Route>
                 <Route path={'posts'} element={<PostsPage/>}>
-                    <Route path={':id'} element={<SinglePostPage/>}/>
+                    <Route path={':id'} element={<SinglePostPage/>}>
+                        <Route path={'comments'} element={<CommentsPage/>}/>
+                    </Route>
                 </Route>
                 <Route path={'about'} element={<AboutPage/>}/>
                 <Route path={'*'} element={<NotFoundPage/>}/>

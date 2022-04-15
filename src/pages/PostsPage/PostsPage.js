@@ -9,7 +9,6 @@ const PostsPage = () => {
 
     const [posts, setPosts] = useState([]);
     const {userId} = useParams();
-    console.log(userId);
 
     useEffect(() => {
         if (userId) {

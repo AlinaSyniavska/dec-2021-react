@@ -1,3 +1,5 @@
+import {Button} from "../Button/Button";
+
 const PostDetails = ({post}) => {
 
     const {id, userId, title, body} = post;
@@ -8,6 +10,8 @@ const PostDetails = ({post}) => {
             <p>userId: {userId}</p>
             <h3>{title}</h3>
             <p>{body}</p>
+            <br/>
+            <Button to={'comments'}>Post`s Comments</Button>
         </div>
     );
 };

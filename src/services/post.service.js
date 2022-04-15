@@ -4,7 +4,8 @@ import {urls} from "../constants";
 const postService = {
     getAll: () => axiosService.get(urls.posts),
     getById: (id) => axiosService.get(`${urls.posts}/${id}`),
-    getByUserId: (id) => axiosService.get(`${urls.users}/${id}/posts`)
+    getByUserId: (id) => axiosService.get(`${urls.users}/${id}/posts`),
+    getCommentsByPostId: (id) => axiosService.get(`${urls.posts}/${id}/comments`)
 }
 
 export {
