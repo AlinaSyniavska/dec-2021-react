@@ -1,3 +1,5 @@
+import {Button} from "../Button/Button";
+
 const UserDetails = ({user}) => {
 
     const {id, name, username, email, phone, address: {city, street}, website} = user;
@@ -12,6 +14,7 @@ const UserDetails = ({user}) => {
             <p>address:</p>
             <p>city: {city}</p>
             <p>street: {street}</p>
+            <Button to={'posts'}>User`s Posts</Button>
         </div>
     );
 };
