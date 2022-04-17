@@ -1,0 +1,16 @@
+.albumItem>* {
+    margin: 0;
+    padding: 0;
+}
+
+.albumItem {
+    border-bottom: 2px solid #ddd;
+    width: 350px;
+    height: 150px;
+    padding: 0 0 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

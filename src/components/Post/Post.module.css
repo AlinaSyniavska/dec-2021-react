@@ -1,0 +1,7 @@
+.postItem{
+    width: 600px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
