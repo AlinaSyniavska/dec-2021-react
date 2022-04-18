@@ -1,6 +1,6 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 
-import {MainLayout} from "./layouts/MainLayout/MainLayout";
+import {MainLayout} from './layouts';
 import {AlbumsPage, CommentsPage, PageNotFound, PhotosPage, SinglePostPage, SingleUserPage, UsersPage} from "./pages";
 import {PostsPage} from "./pages";
 
