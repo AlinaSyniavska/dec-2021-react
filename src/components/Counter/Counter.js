@@ -1,16 +1,15 @@
-import cssCounters from "../Counters/Counters.module.css";
+import cssCounter from "./Counter.module.css";
 
-const Counter = (props, dispatchInc) => {
+const Counter = (props) => {
 
-    const {count} = props;
-    console.log(dispatchInc);
+    const {count, type, dispatch} = props;
 
     return (
-        <div className={cssCounters.counter}>
+        <div className={cssCounter.counter}>
             <div>{count}</div>
-            <button onClick={() => dispatchInc()}>INC</button>
-            {/*<button onClick={() => dispatch({type: 'dec3'})}>DEC</button>*/}
-            {/*<button onClick={() => dispatch({type: 'reset3', payload: 0})}>RESET</button>*/}
+            <button onClick={() => dispatch({type: type.inc})}>INC</button>
+            <button onClick={() => dispatch({type: type.dec})}>DEC</button>
+            <button onClick={() => dispatch({type: type.reset})}>RESET</button>
         </div>
     );
 };
