@@ -1,0 +1,9 @@
+.formContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formContainer form {
+    margin: 0;
+}
+
