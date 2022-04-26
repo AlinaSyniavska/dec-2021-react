@@ -1,6 +1,5 @@
-import {CatForm, Cats} from "./components";
+import {CatForm, Cats, DogForm, Dogs} from "./components";
 import cssApp from './App.module.css';
-import {useState} from "react";
 
 function App() {
 
@@ -12,7 +11,10 @@ function App() {
                     <Cats/>
                 </div>
 
-
+                <div>
+                    <DogForm/>
+                    <Dogs/>
+                </div>
             </div>
         </div>
     );

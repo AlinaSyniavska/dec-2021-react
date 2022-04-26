@@ -1,25 +1,26 @@
 import {useEffect, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {catActions} from "../../redux/slices/cat.slice";
+import {catActions} from "../../redux";
+
 
 const CatForm = () => {
-    let catName = useRef();
-    let btnSave = useRef();
-    let btnUpdate = useRef();
-    const dispatch = useDispatch();
+    const catName = useRef();
+    const btnSave = useRef();
+    const btnUpdate = useRef();
+
     const {catForUpdate} = useSelector(state => state.catState);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (catForUpdate) {
-            const {name} = catForUpdate;
-            catName.current.value = name;
+            catName.current.value = catForUpdate.name;
             btnUpdate.current.disabled = false;
             btnSave.current.disabled = true;
         } else {
             btnUpdate.current.disabled = true;
             btnSave.current.disabled = false;
         }
-    }, [catForUpdate, btnUpdate])
+    }, [catForUpdate])
 
     const createCatName = () => {
         if (catName.current.value.trim() !== '') {

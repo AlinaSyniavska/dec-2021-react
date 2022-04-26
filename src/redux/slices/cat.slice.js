@@ -23,10 +23,13 @@ const catSlice = createSlice({
         updateCat: (state, action) => {
             const {id, name} = action.payload;
             const index = state.cats.findIndex(item => item.id === id);
-            const newCat = {...state.cats[index], id, name};
-            state.cats.splice(index, 1, newCat);
+            /*const newCat = {...state.cats[index], id, name};
+            state.cats.splice(index, 1, newCat);*/
+            state.cats[index].name = name;
+            state.catForUpdate = false;
         },
         setCatForUpdate: (state, action) => {
+            // state.catForUpdate = action.payload.cat;
             state.catForUpdate = action.payload.catForUpdate;
         }
     }
