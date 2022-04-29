@@ -1,17 +1,15 @@
 import cssCar from './Car.module.css'
-import {useDispatch} from "react-redux";
-import {carActions} from "../../redux";
+import {Link} from "react-router-dom";
 
 const Car = ({car}) => {
-    const {id, model, price, year} = car;
-
-    const dispatch = useDispatch();
+    const {id, model} = car;
 
     return (
         <div className={cssCar.carItem}>
-            <div>{id}: {model} - {price} - {year}</div>
-            <button onClick={() => dispatch(carActions.deleteById({id}))}>Delete</button>
-            <button onClick={() => dispatch(carActions.setCarForUpdate({car}))}>Update</button>
+            <div>{id}: Model - {model}</div>
+            <Link to={id.toString()} state={car}>
+                <button>Car Details</button>
+            </Link>
         </div>
     );
 };

@@ -34,7 +34,7 @@ const deleteById = createAsyncThunk(
     'carSlice/deleteById',
     async ({id}, {dispatch, rejectWithValue}) => {
         try {
-            await carService.deleteDyId(id);
+            await carService.deleteById(id);
             dispatch(deleteCar({id}));
         } catch (e) {
             return rejectWithValue({errorStatus: e.message})
@@ -66,7 +66,8 @@ const carSlice = createSlice({
         updateCar: (state, action) => {
             const index = state.cars.findIndex(car => car.id === action.payload.id);
             state.cars[index] = {...state.cars[index], ...action.payload.car};
-            state.carForUpdate = false;        },
+            state.carForUpdate = false;
+        },
         setCarForUpdate: (state, action) => {
             state.carForUpdate = action.payload.car;
         }

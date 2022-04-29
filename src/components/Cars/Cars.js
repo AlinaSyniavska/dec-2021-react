@@ -18,9 +18,7 @@ const Cars = () => {
         <div>
             {status && <h3>{status}</h3>}
             <div className={cssCars.carsContainer}>
-                {
-                    cars.map(car => <Car key={car.id} car={car}/>)
-                }
+                {cars.map(car => <Car key={car.id} car={car}/>)}
             </div>
         </div>
     );
