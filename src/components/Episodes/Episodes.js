@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useSearchParams} from "react-router-dom";
+import {useLocation, useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 
 import {episodeAction} from "../../redux";
@@ -12,9 +12,15 @@ const Episodes = () => {
     const dispatch = useDispatch();
     const [query, setQuery] = useSearchParams({page: '1'});
 
-useEffect(() => {
-    dispatch(episodeAction.getAll({page: query.get('page')}));
-}, [query]);
+    const {pathname, search} = useLocation();
+
+    useEffect(() => {
+        dispatch(episodeAction.getAll({page: query.get('page')}));
+    }, [query]);
+
+    useEffect(() => {
+        dispatch(episodeAction.setCurrentPage({pathCurrentPage: pathname+search}))
+    }, [search])
 
     function showPrevPage() {
         const prevPage = +query.get('page') - 1;
@@ -36,7 +42,7 @@ useEffect(() => {
                 <button disabled={!next} onClick={showNextPage}>Next</button>
             </div>
         </div>
-)
+    )
 };
 
 export {Episodes};
