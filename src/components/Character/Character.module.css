@@ -1,0 +1,10 @@
+.characterItem {
+    border: 2px solid maroon;
+    border-radius: 5px;
+    padding: 5px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
