@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import {episodeAction} from "../../redux";
 import {Episode} from "../Episode/Episode";
 import cssEpisodes from './Episodes.module.css'
+import {NumbersPages} from "../NumbersPages/NumbersPages";
 
 const Episodes = () => {
 
@@ -34,12 +35,13 @@ const Episodes = () => {
 
     return (
         <div>
-            <div className={cssEpisodes.episodeContainer}>
-                {episodes.map(episode => <Episode key={episode.id} episodeItem={episode}/>)}
-            </div>
             <div className={cssEpisodes.btnContainer}>
                 <button disabled={!prev} onClick={showPrevPage}>Prev</button>
+                <NumbersPages/>
                 <button disabled={!next} onClick={showNextPage}>Next</button>
+            </div>
+            <div className={cssEpisodes.episodeContainer}>
+                {episodes.map(episode => <Episode key={episode.id} episodeItem={episode}/>)}
             </div>
         </div>
     )
