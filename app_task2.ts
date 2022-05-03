@@ -3,11 +3,11 @@ import {IUserShortInfo} from "./interfaces";
 const user: IUserShortInfo = {
     name:"Max",
     age:12,
-    gender:'male'
+    gender:'male',
 }
 
 function sum(a: number, b: number): number {
-    return a + b
+    return a + b;
 }
 
 const showSum = (a: number, b: number): void => {
@@ -15,10 +15,10 @@ const showSum = (a: number, b: number): void => {
 };
 
 const incAge = (someUser: IUserShortInfo, inc: number): IUserShortInfo => {
-    someUser.age += inc
-    return someUser
+    someUser.age += inc;
+    return someUser;
 };
 
 console.log(sum(1, 2));
-showSum(2, 3)
+showSum(2, 3);
 console.log(incAge(user, 2));
