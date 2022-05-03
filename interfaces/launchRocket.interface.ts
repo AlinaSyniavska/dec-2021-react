@@ -10,30 +10,30 @@ export interface ILaunchRocket {
         video_link: string
     },
     rocket: {
-        rocket_name: string,
-        first_stage: IFirstStage,
-        second_stage: ISecondStage
+        rocket_name: string
+        first_stage: {
+            cores: ICore[]
+        },
+        second_stage: {
+            payloads: IPayload[]
+        }
     }
 }
 
-interface IFirstStage {
-    cores: [
-        {
-            flight: number,
-            core: {
-                reuse_count: number,
-                status: string
-            }
-        }
-    ]
+interface ICore {
+
+    flight: number,
+    core: {
+        reuse_count: number,
+        status: string
+    }
+
 }
 
-interface ISecondStage {
-    payloads: [
-        {
-            payload_type: string,
-            payload_mass_kg: number,
-            payload_mass_lbs: number
-        }
-    ]
+interface IPayload {
+    payload_type: string,
+    payload_mass_kg: number,
+    payload_mass_lbs: number
 }
+
+
