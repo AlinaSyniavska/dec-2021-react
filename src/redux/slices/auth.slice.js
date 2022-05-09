@@ -40,10 +40,7 @@ const authSlice = createSlice({
                 localStorage.setItem('refresh', refresh);
             })
             .addCase(login.rejected, (state, action) => {
-                console.log('************');
-
-
-                state.loginError = true;
+                 state.loginError = true;
 
                 const {errorStatus, errorsFromForm} = action.payload;
                 state.authStatus = errorStatus;

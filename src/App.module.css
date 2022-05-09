@@ -1,0 +1,11 @@
+label{
+    display: block;
+    width: 100px;
+}
+
+button{
+    margin-top: 10px;
+    width: 100px;
+    padding: 5px 0;
+    cursor: pointer;
+}

@@ -5,6 +5,7 @@ import {CarPage, LoginPage, RegisterPage} from "./pages";
 import {RequireAuth} from "./hoc";
 import {useDispatch} from "react-redux";
 import {authActions} from "./redux";
+import './App.module.css';
 
 const App = () => {
     const dispatch = useDispatch();

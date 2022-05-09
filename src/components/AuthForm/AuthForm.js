@@ -38,8 +38,12 @@ const AuthForm = () => {
 
     return (
         <form onSubmit={handleSubmit(submitForm)}>
-            <input type={'text'} placeholder={'username'} {...register('username')}/>
-            <input type={'password'} placeholder={'password'} {...register('password')}/>
+            <label>Username
+                <input type={'text'} placeholder={'username'} {...register('username')}/>
+            </label>
+            <label>Password
+                <input type={'password'} placeholder={'password'} {...register('password')}/>
+            </label>
             <button>{isLogin ? 'Login' : 'Register'}</button>
 
             <div>

@@ -1,10 +1,10 @@
-import {Cars} from "../../components";
+import {CarForm, Cars} from "../../components";
 
 const CarPage = () => {
     return (
         <div>
-            CarPage
-
+            <CarForm/>
+            <br/>
             <Cars/>
         </div>
     );
